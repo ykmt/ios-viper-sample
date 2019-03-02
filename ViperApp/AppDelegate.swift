@@ -1,10 +1,4 @@
-//
 //  AppDelegate.swift
-//  ViperApp
-//
-//  Created by Yukimitsu MORITANI on 2019/03/02.
-//  Copyright © 2019年 Object.appWorks. All rights reserved.
-//
 
 import UIKit
 
@@ -15,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        Router.App.setupAppView(window!)
         return true
     }
 
