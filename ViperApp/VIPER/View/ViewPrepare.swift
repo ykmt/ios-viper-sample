@@ -1,0 +1,3 @@
+// ViewPrepare.swift
+
+protocol ViewPrepare { }

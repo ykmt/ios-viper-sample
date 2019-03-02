@@ -1,0 +1,3 @@
+// ViewAction.swift
+
+protocol ViewAction { }

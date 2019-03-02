@@ -1,0 +1,3 @@
+// PresenterInterface.swift
+
+protocol PresenterInterface { }

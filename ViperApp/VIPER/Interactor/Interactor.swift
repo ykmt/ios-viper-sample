@@ -1,0 +1,3 @@
+// Interactor.swift
+
+protocol Interactor { }
