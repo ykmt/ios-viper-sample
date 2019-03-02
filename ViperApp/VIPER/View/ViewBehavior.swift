@@ -1,0 +1,3 @@
+// ViewBehavior.swift
+
+protocol ViewBehavior { }

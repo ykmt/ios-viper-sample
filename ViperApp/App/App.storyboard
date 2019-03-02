@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WNb-2e-1Lq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hello VIPER-->
+        <scene sceneID="Nzt-g5-4Ui">
+            <objects>
+                <viewController title="Hello VIPER" id="WNb-2e-1Lq" customClass="AppViewController" customModule="ViperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qg4-ei-KbS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhj-iD-Kxf">
+                                <rect key="frame" x="161" y="318" width="53.5" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="518-bR-u6P">
+                                <rect key="frame" x="158.5" y="357.5" width="58" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handleButtonAction:" destination="WNb-2e-1Lq" eventType="touchUpInside" id="H8G-vS-rTa"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3go-FS-e8o">
+                                <rect key="frame" x="67" y="99" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="VUY-a3-Z0H" kind="embed" identifier="AppContainerViewControllerSegue" id="2uJ-Xv-10t"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qxy-qu-PCn" firstAttribute="trailing" secondItem="3go-FS-e8o" secondAttribute="trailing" constant="68" id="7Ox-2K-BM5"/>
+                            <constraint firstItem="518-bR-u6P" firstAttribute="centerX" secondItem="qg4-ei-KbS" secondAttribute="centerX" id="F18-GA-Heh"/>
+                            <constraint firstItem="xhj-iD-Kxf" firstAttribute="centerY" secondItem="qg4-ei-KbS" secondAttribute="centerY" id="GGZ-dj-qZC"/>
+                            <constraint firstItem="3go-FS-e8o" firstAttribute="top" secondItem="Qxy-qu-PCn" secondAttribute="top" constant="79" id="PVC-wN-QKX"/>
+                            <constraint firstItem="3go-FS-e8o" firstAttribute="leading" secondItem="Qxy-qu-PCn" secondAttribute="leading" constant="67" id="aZ4-Fv-SH6"/>
+                            <constraint firstItem="xhj-iD-Kxf" firstAttribute="top" secondItem="3go-FS-e8o" secondAttribute="bottom" constant="91" id="bb5-mn-Auc"/>
+                            <constraint firstItem="518-bR-u6P" firstAttribute="top" secondItem="xhj-iD-Kxf" secondAttribute="bottom" constant="8" id="ef0-jB-L3U"/>
+                            <constraint firstItem="xhj-iD-Kxf" firstAttribute="centerX" secondItem="qg4-ei-KbS" secondAttribute="centerX" id="vD3-M1-Tid"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qxy-qu-PCn"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="518-bR-u6P" id="6s5-gg-sc2"/>
+                        <outlet property="label" destination="xhj-iD-Kxf" id="9Fh-by-RAw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pkw-Xn-Y8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="147"/>
+        </scene>
+        <!--App Container View Controller-->
+        <scene sceneID="tTr-P8-EcE">
+            <objects>
+                <viewController id="VUY-a3-Z0H" customClass="AppContainerViewController" customModule="ViperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYq-w4-Ael">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Container" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnR-Wq-gzC">
+                                <rect key="frame" x="65.5" y="48.5" width="109.5" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YnR-Wq-gzC" firstAttribute="centerX" secondItem="gYq-w4-Ael" secondAttribute="centerX" id="AaR-jb-HS6"/>
+                            <constraint firstItem="YnR-Wq-gzC" firstAttribute="centerY" secondItem="gYq-w4-Ael" secondAttribute="centerY" id="g2x-JU-sbU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaK-7y-L2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="146"/>
+        </scene>
+    </scenes>
+</document>

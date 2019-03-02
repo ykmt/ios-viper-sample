@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NNc-uU-mmN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Greeting-->
+        <scene sceneID="JhM-PC-jbr">
+            <objects>
+                <viewController title="Greeting" id="qWS-cR-ZIG" customClass="GreetingViewController" customModule="ViperApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ieG-U5-X4N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNJ-jO-GDt">
+                                <rect key="frame" x="132" y="315.5" width="111" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UC-eD-s2r">
+                                <rect key="frame" x="158.5" y="390" width="58" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handleHiButtonAction:" destination="qWS-cR-ZIG" eventType="touchUpInside" id="3BN-vA-YmT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3UC-eD-s2r" firstAttribute="top" secondItem="MNJ-jO-GDt" secondAttribute="bottom" constant="38.5" id="PEL-uL-GrJ"/>
+                            <constraint firstItem="MNJ-jO-GDt" firstAttribute="centerX" secondItem="ieG-U5-X4N" secondAttribute="centerX" id="Y1a-uX-YLV"/>
+                            <constraint firstItem="3UC-eD-s2r" firstAttribute="centerX" secondItem="ieG-U5-X4N" secondAttribute="centerX" id="Z2z-Il-j9V"/>
+                            <constraint firstItem="MNJ-jO-GDt" firstAttribute="centerY" secondItem="ieG-U5-X4N" secondAttribute="centerY" id="qGt-EB-2J9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bcv-3S-6MP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2k5-w3-3ba">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="i0k-ZZ-Tj6">
+                            <connections>
+                                <action selector="handleCloseButtonAction:" destination="qWS-cR-ZIG" id="ONh-CR-jRJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="i0k-ZZ-Tj6" id="ZPr-AT-GRC"/>
+                        <outlet property="hiButton" destination="3UC-eD-s2r" id="0ud-xB-Hp0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCe-Jy-odZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104.8" y="157.87106446776613"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KVp-Gb-3DG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNc-uU-mmN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0gm-HQ-qoD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qWS-cR-ZIG" kind="relationship" relationship="rootViewController" id="LdA-pN-Tsk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSd-4B-rBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="157.87106446776613"/>
+        </scene>
+    </scenes>
+</document>

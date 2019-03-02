@@ -1,0 +1,3 @@
+// Presenter.swift
+
+protocol Presenter { }
