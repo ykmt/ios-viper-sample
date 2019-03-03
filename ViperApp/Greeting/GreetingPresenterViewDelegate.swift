@@ -1,12 +1,12 @@
 // GreetingPresenterViewDelegate.swift
 
-/// Greeting Presenter View Delegate
+/// Presenter View Delegate
 
-protocol GreetingPresenterViewDelegate: PresenterDelegate { }
+protocol GreetingPresenterViewDelegate: ViewDelegate { }
 
-/// Greeting Presenter View Delegate Impl
+/// Presenter View Delegate Impl
 
-class GreetingPresenterViewDelegateImpl: GreetingPresenterViewDelegate {
+struct GreetingPresenterViewDelegateImpl: GreetingPresenterViewDelegate {
     
     // MARK: - Vars
     

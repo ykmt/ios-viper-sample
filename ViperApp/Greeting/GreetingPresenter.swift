@@ -1,6 +1,6 @@
 // GreetingPresenter.swift
 
-/// Greeing Presenter
+/// Presenter
 
 protocol GreetingPresenter: Presenter {
     var viewDelegate: GreetingPresenterViewDelegate { get }
@@ -9,24 +9,22 @@ protocol GreetingPresenter: Presenter {
     func sayHi()
 }
 
-/// Greeting Presentation Interface
+/// Presentation Interface
 
 protocol GreetingPresenterInterface: PresenterInterface {
     var shouldClose: Bool { get }
-    
     func didClose()
 }
 
-/// Greeting Presenter Impl
+/// Presenter Impl
 
 struct GreetingPresenterImpl: GreetingPresenter, GreetingPresenterInterface {
 
     private let behavior: GreetingViewBehavior?
+    
     var interactor: GreetingInteractor = GreetingInteractorImpl()
-
     var viewDelegate: GreetingPresenterViewDelegate
     var viewAction: GreetingPresenterViewAction = GreetingPresenterViewActionImpl()
-    
     var shouldClose: Bool {
         return interactor.isSayHi
     }
@@ -34,6 +32,7 @@ struct GreetingPresenterImpl: GreetingPresenter, GreetingPresenterInterface {
     init(_ viewBehavior: GreetingViewBehavior) {
         behavior = viewBehavior
         viewDelegate = GreetingPresenterViewDelegateImpl(viewBehavior)
+        
         viewAction.behavior = behavior
         viewAction.presenter = self
         viewAction.interactor = interactor

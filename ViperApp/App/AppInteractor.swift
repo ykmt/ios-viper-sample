@@ -1,23 +1,26 @@
 // AppInteractor.swift
 
-/// App Interactor
+/// Interactor
 
 protocol AppInteractor: Interactor {
     var alreadyGreeting: Bool { get }
-    func didGreeting()
+    func didGreeting() -> Person
 }
 
-/// App Interactor Impl
+/// Interactor Impl
 
 class AppInteractorImpl: AppInteractor {
 
     var greeting: Greeting = Greeting()
-    
+    var entity: PersonEntity?
     var alreadyGreeting: Bool {
         return greeting.isGreeting
     }
 
-    func didGreeting() {
+    func didGreeting() -> Person {
         greeting.isGreeting = true
+        
+        entity = PersonEntity(firstName: "yk", lastName: "mt", age: 45)
+        return entity! as Person
     }
 }

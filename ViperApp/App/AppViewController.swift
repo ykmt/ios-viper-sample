@@ -2,28 +2,28 @@
 
 import UIKit
 
-/// App View Viper
+/// Viper
 
-protocol AppViewViper {
+protocol AppViper {
     var presenter: AppPresenter? { get set }
 }
 
-/// App View Behavior
+/// View Behavior
 
 protocol AppViewBehavior: ViewBehavior {
     func updateLabelTitle(_ text: String)
     func updateButtonTitle(_ text: String)
 }
 
-/// App View Action
+/// View Action
 
 protocol AppViewAction: ViewAction {
     func greetingButtonAction()
 }
 
-/// App View Controller
+/// View Controller
 
-class AppViewController: UIViewController, AppViewViper, AppViewBehavior {
+class AppViewController: UIViewController, AppViper, AppViewBehavior {
 
     let EmbedSegueToContainerView = "AppContainerViewControllerSegue"
 

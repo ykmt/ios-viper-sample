@@ -1,12 +1,12 @@
 // AppContainerPresenter.swift
 
-/// App Container Presenter
+/// Presenter
 
 protocol AppContainerPresenter: Presenter {
     var viewDelegate: AppContainerPresenterViewDelegate { get }
 }
 
-/// App Container Presenter Impl
+/// Presenter Impl
 
 struct AppContainerPresenterImpl: AppContainerPresenter {
     let behavior: AppContainerViewBehavior

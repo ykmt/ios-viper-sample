@@ -1,21 +1,20 @@
 // AppPresenter.swift
 
-/// App Presenter
+/// Presenter
 
 protocol AppPresenter: Presenter {
     var viewDelegate: AppPresenterViewDelegate { get }
     var viewAction: AppPresenterViewAction { get }
 }
 
-/// App Presenter Interface
+/// Presenter Interface
 
 protocol AppPresenterInterface: PresenterInterface {
     var shouldShowGreetingView: Bool { get }
-    
     func didShowGreetingView()
 }
 
-/// App Presenter Impl
+/// Presenter Impl
 
 struct AppPresenterImpl: AppPresenter, AppPresenterInterface {
 
@@ -26,7 +25,6 @@ struct AppPresenterImpl: AppPresenter, AppPresenterInterface {
     
     var viewDelegate: AppPresenterViewDelegate
     var viewAction: AppPresenterViewAction = AppPresenterViewActionImpl()
-    
     var shouldShowGreetingView: Bool {
         return !interactor.alreadyGreeting
     }
@@ -41,8 +39,8 @@ struct AppPresenterImpl: AppPresenter, AppPresenterInterface {
     // MARK: - App Presenter Interface
     
     func didShowGreetingView() {
-        interactor.didGreeting()
-        behavior.updateButtonTitle("See you.")
+        let person = interactor.didGreeting()
+        behavior.updateButtonTitle("See you " + person.firstName + ".")
     }
     
 }

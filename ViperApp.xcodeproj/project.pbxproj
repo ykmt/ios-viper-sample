@@ -15,7 +15,6 @@
 		E011F893222A458100706053 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F892222A458100706053 /* AppViewController.swift */; };
 		E011F895222A497500706053 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E011F894222A497500706053 /* App.storyboard */; };
 		E011F897222A4E5100706053 /* AppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F896222A4E5100706053 /* AppPresenter.swift */; };
-		E011F89A222A4EE300706053 /* PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F899222A4EE300706053 /* PresenterDelegate.swift */; };
 		E011F89C222A4F9B00706053 /* AppPresenterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F89B222A4F9B00706053 /* AppPresenterViewDelegate.swift */; };
 		E011F8A1222A5BCE00706053 /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8A0222A5BCE00706053 /* AppInteractor.swift */; };
 		E011F8A3222A5E4B00706053 /* GreetingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8A2222A5E4B00706053 /* GreetingRouter.swift */; };
@@ -24,7 +23,6 @@
 		E011F8AA222A690000706053 /* Greeting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E011F8A9222A690000706053 /* Greeting.storyboard */; };
 		E011F8AC222A706900706053 /* Greeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8AB222A706900706053 /* Greeting.swift */; };
 		E011F8AF222A70CE00706053 /* ViewBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8AE222A70CE00706053 /* ViewBehavior.swift */; };
-		E011F8B2222A714500706053 /* ViewPrepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8B1222A714500706053 /* ViewPrepare.swift */; };
 		E011F8B4222A718300706053 /* ViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8B3222A718300706053 /* ViewAction.swift */; };
 		E011F8B6222A71B800706053 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8B5222A71B800706053 /* Interactor.swift */; };
 		E011F8B9222A75B400706053 /* GreetingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8B8222A75B400706053 /* GreetingPresenter.swift */; };
@@ -36,6 +34,8 @@
 		E011F8C6222A996F00706053 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8C5222A996F00706053 /* Presenter.swift */; };
 		E011F8C8222A99A500706053 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8C7222A99A500706053 /* PresenterInterface.swift */; };
 		E011F8CA222A9A3100706053 /* AppContainerPresenterViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011F8C9222A9A3100706053 /* AppContainerPresenterViewDelegate.swift */; };
+		E0222FF0222D7B0500F2912F /* ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0222FEF222D7B0500F2912F /* ViewDelegate.swift */; };
+		E0E16A81222ACCAC004B81F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E16A80222ACCAC004B81F1 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,6 @@
 		E011F892222A458100706053 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		E011F894222A497500706053 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		E011F896222A4E5100706053 /* AppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresenter.swift; sourceTree = "<group>"; };
-		E011F899222A4EE300706053 /* PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterDelegate.swift; sourceTree = "<group>"; };
 		E011F89B222A4F9B00706053 /* AppPresenterViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresenterViewDelegate.swift; sourceTree = "<group>"; };
 		E011F8A0222A5BCE00706053 /* AppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInteractor.swift; sourceTree = "<group>"; };
 		E011F8A2222A5E4B00706053 /* GreetingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingRouter.swift; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		E011F8A9222A690000706053 /* Greeting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Greeting.storyboard; sourceTree = "<group>"; };
 		E011F8AB222A706900706053 /* Greeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeting.swift; sourceTree = "<group>"; };
 		E011F8AE222A70CE00706053 /* ViewBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBehavior.swift; sourceTree = "<group>"; };
-		E011F8B1222A714500706053 /* ViewPrepare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPrepare.swift; sourceTree = "<group>"; };
 		E011F8B3222A718300706053 /* ViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAction.swift; sourceTree = "<group>"; };
 		E011F8B5222A71B800706053 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		E011F8B8222A75B400706053 /* GreetingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPresenter.swift; sourceTree = "<group>"; };
@@ -70,6 +68,8 @@
 		E011F8C5222A996F00706053 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		E011F8C7222A99A500706053 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		E011F8C9222A9A3100706053 /* AppContainerPresenterViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerPresenterViewDelegate.swift; sourceTree = "<group>"; };
+		E0222FEF222D7B0500F2912F /* ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
+		E0E16A80222ACCAC004B81F1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,6 @@
 			children = (
 				E011F8C5222A996F00706053 /* Presenter.swift */,
 				E011F8C7222A99A500706053 /* PresenterInterface.swift */,
-				E011F899222A4EE300706053 /* PresenterDelegate.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -176,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				E011F8AB222A706900706053 /* Greeting.swift */,
+				E0E16A80222ACCAC004B81F1 /* Person.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -184,8 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				E011F8AE222A70CE00706053 /* ViewBehavior.swift */,
-				E011F8B1222A714500706053 /* ViewPrepare.swift */,
 				E011F8B3222A718300706053 /* ViewAction.swift */,
+				E0222FEF222D7B0500F2912F /* ViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,23 +286,23 @@
 				E011F8BB222A777600706053 /* GreetingPresenterViewDelegate.swift in Sources */,
 				E011F88D222A418F00706053 /* Router.swift in Sources */,
 				E011F8AC222A706900706053 /* Greeting.swift in Sources */,
-				E011F8B2222A714500706053 /* ViewPrepare.swift in Sources */,
 				E011F8B9222A75B400706053 /* GreetingPresenter.swift in Sources */,
 				E011F8A5222A5FFE00706053 /* AppPresenterViewAction.swift in Sources */,
 				E011F8C6222A996F00706053 /* Presenter.swift in Sources */,
+				E0E16A81222ACCAC004B81F1 /* Person.swift in Sources */,
 				E011F87822299A8D00706053 /* AppDelegate.swift in Sources */,
 				E011F8CA222A9A3100706053 /* AppContainerPresenterViewDelegate.swift in Sources */,
 				E011F8BD222A79F100706053 /* GreetingPresenterViewAction.swift in Sources */,
 				E011F891222A432500706053 /* AppRouter.swift in Sources */,
 				E011F8AF222A70CE00706053 /* ViewBehavior.swift in Sources */,
 				E011F8B4222A718300706053 /* ViewAction.swift in Sources */,
-				E011F89A222A4EE300706053 /* PresenterDelegate.swift in Sources */,
 				E011F8C8222A99A500706053 /* PresenterInterface.swift in Sources */,
 				E011F89C222A4F9B00706053 /* AppPresenterViewDelegate.swift in Sources */,
 				E011F8A1222A5BCE00706053 /* AppInteractor.swift in Sources */,
 				E011F8B6222A71B800706053 /* Interactor.swift in Sources */,
 				E011F8C1222A96BE00706053 /* AppContainerViewController.swift in Sources */,
 				E011F8C4222A993A00706053 /* AppContainerPresenter.swift in Sources */,
+				E0222FF0222D7B0500F2912F /* ViewDelegate.swift in Sources */,
 				E011F8A7222A68DB00706053 /* GreetingViewController.swift in Sources */,
 				E011F897222A4E5100706053 /* AppPresenter.swift in Sources */,
 			);
