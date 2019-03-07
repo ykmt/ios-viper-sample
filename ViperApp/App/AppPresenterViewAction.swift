@@ -1,13 +1,13 @@
 // AppPresenterViewAction.swift
 
-/// App Presenter View Action
+/// Presenter View Action
 
 protocol AppPresenterViewAction: AppViewAction {
     var presenter: AppPresenter? { get set }
     var interactor: AppInteractor? { get set }
 }
 
-/// App Presenter View Action Impl
+/// Presenter View Action Impl
 
 struct AppPresenterViewActionImpl: AppPresenterViewAction {
     

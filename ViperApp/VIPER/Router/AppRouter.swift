@@ -3,40 +3,44 @@
 import UIKit
 
 /// App Wireframe
+///
+/// `Router`プロトコルです。 `GreetingWireframe`の実装クラスを変数に持ちます。
 
 protocol AppRouter {
-    var Greeting: GreetingWireframe { get }
+    var Greeting: GreetingWireframe { get set }
 }
 
 /// App Wireframe
+///
+/// `Wireframe`プロトコルです。
+///
+/// `AppView`に関する画面遷移を担当し、`View`の参照を保持し、`Presenter`オブジェクトを生成し`View`に設定します。
 
 protocol AppWireframe: AppRouter {
     var View: AppViewController? { get set }
-    
-    func setupAppView(_ window: UIWindow)
-    
+    func setup(_ window: UIWindow)
     func prepareAppContainerView(_ view: AppContainerViewController)
-    
     func presentGreetingView(from presenter: AppPresenterInterface)
     func closeGreetingView(completion: (() -> Void)?)
 }
 
-/// App Router Impl
+/// App Wireframe Impl
+///
+/// `AppWireframe`プロトコルを実装します。
+///
+/// `Wireframe`は `UIKit`をimportできるので、UIWindow, UIViewControllerなどを扱うことができます。
 
-struct AppRouterImpl: AppWireframe {
+struct AppWireframeImpl: AppWireframe {
 
-    var Greeting: GreetingWireframe {
-        return GreetingRouterImpl()
-    }
-    
+    var Greeting: GreetingWireframe = GreetingWireframeImpl()
     var View: AppViewController?
 
-    func setupAppView(_ window: UIWindow) {
+    func setup(_ window: UIWindow) {
         guard let appVC = window.rootViewController as? AppViewController else {
             return
         }
         Router.App.View = appVC
-        Router.App.View?.presenter = AppPresenterImpl(appVC)
+        appVC.presenter = AppPresenterImpl(appVC)
     }
     
     func prepareAppContainerView(_ view: AppContainerViewController) {
@@ -45,14 +49,7 @@ struct AppRouterImpl: AppWireframe {
     
     func presentGreetingView(from presenter: AppPresenterInterface) {
         if presenter.shouldShowGreetingView {
-            let sb = UIStoryboard(name: "Greeting", bundle: nil)
-            guard let nc = sb.instantiateInitialViewController() as? UINavigationController,
-                let greetingView = nc.viewControllers[0] as? GreetingViewController else {
-                return
-            }
-            
-            greetingView.presenter = GreetingPresenterImpl(greetingView)
-            View?.present(nc, animated: true, completion: {
+            Greeting.presentGreetingView(from: self, completion: {
                 presenter.didShowGreetingView()
             })
         }

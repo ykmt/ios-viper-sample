@@ -2,13 +2,13 @@
 
 import UIKit
 
-/// Greeting View Viper
+/// Viper
 
-protocol GreetingViewViper {
+protocol GreetingViper {
     var presenter: GreetingPresenter? { get set }
 }
 
-/// Greeting View Behavior
+/// View Behavior
 
 protocol GreetingViewBehavior: ViewBehavior {
     func updateHiButtonTitle(_ text: String)
@@ -17,16 +17,16 @@ protocol GreetingViewBehavior: ViewBehavior {
     func updateCloseButtonEnable(_ isEnabled: Bool)
 }
 
-/// Greeting View Action
+/// View Action
 
 protocol GreetingViewAction: ViewAction {
     func hiButtonAction()
     func closeButtonAction()
 }
 
-/// Greeting View Controller
+/// View
 
-class GreetingViewController: UIViewController, GreetingViewViper, GreetingViewBehavior {
+class GreetingViewController: UIViewController, GreetingViper, GreetingViewBehavior {
 
     @IBOutlet weak var closeButton: UIBarButtonItem!
     @IBOutlet weak var hiButton: UIButton!

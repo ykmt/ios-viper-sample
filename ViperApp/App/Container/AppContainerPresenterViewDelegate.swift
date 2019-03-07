@@ -1,12 +1,12 @@
 // AppContainerPresenterViewDelegate.swift
 
-/// App Container Presenter View Delegate
+/// Presenter View Delegate
 
-protocol AppContainerPresenterViewDelegate: PresenterDelegate { }
+protocol AppContainerPresenterViewDelegate: ViewDelegate { }
 
-/// App Container Presenter View Delegate Impl
+/// Presenter View Delegate Impl
 
-class AppContainerPresenterViewDelegateImpl: AppContainerPresenterViewDelegate {
+struct AppContainerPresenterViewDelegateImpl: AppContainerPresenterViewDelegate {
     
     // MARK: - Vars
     

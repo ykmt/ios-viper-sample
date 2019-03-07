@@ -1,6 +1,6 @@
 //  GreetingInteractor.swift
 
-/// Greeting Interactor
+/// Interactor
 
 protocol GreetingInteractor: Interactor {
     var isSayHi: Bool { get }
@@ -8,7 +8,7 @@ protocol GreetingInteractor: Interactor {
     func sayHi()
 }
 
-/// Greeting Interactor Impl
+/// Interactor Impl
 
 class GreetingInteractorImpl: GreetingInteractor {
 

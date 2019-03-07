@@ -2,21 +2,21 @@
 
 import UIKit
 
-/// App Container View Viper
+/// Viper
 
-protocol AppContainerViewViper {
+protocol AppContainerViper {
     var presenter: AppContainerPresenter? { get set }
 }
 
-/// App Container View Behavior
+/// View Behavior
 
 protocol AppContainerViewBehavior: ViewBehavior {
     func setBackgroundColor(_ color: UIColor)
 }
 
-/// App Container View Controller
+/// View
 
-class AppContainerViewController: UIViewController, AppContainerViewViper, AppContainerViewBehavior{
+class AppContainerViewController: UIViewController, AppContainerViper, AppContainerViewBehavior{
 
     var presenter: AppContainerPresenter?
     

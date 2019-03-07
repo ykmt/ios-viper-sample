@@ -1,6 +1,6 @@
 // GreetingPresenterViewAction.swift
 
-/// Greeting Presenter View Action
+/// Presenter View Action
 
 protocol GreetingPresenterViewAction: GreetingViewAction {
     var behavior: GreetingViewBehavior? { get set }
@@ -8,7 +8,7 @@ protocol GreetingPresenterViewAction: GreetingViewAction {
     var interactor: GreetingInteractor? { get set }
 }
 
-/// Greeting Presenter View Action Impl
+/// Presenter View Action Impl
 
 struct GreetingPresenterViewActionImpl: GreetingPresenterViewAction {
     
