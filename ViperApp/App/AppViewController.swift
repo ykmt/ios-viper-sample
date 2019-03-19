@@ -18,7 +18,7 @@ protocol AppViewBehavior: ViewBehavior {
 /// View Action
 
 protocol AppViewAction: ViewAction {
-    func greetingButtonAction()
+    func handleButtonAction()
 }
 
 /// View Controller
@@ -39,7 +39,7 @@ class AppViewController: UIViewController, AppViper, AppViewBehavior {
     }
     
     @IBAction func handleButtonAction(_ sender: Any) {
-        presenter?.viewAction.greetingButtonAction()
+        presenter?.viewAction.handleButtonAction()
     }
     
     // MARK: - Navigation

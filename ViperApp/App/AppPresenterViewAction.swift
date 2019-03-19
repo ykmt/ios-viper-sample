@@ -16,7 +16,7 @@ struct AppPresenterViewActionImpl: AppPresenterViewAction {
     
     // MARK: - App Presenter View Action
     
-    func greetingButtonAction() {
+    func handleButtonAction() {
         guard let view = presenter as? AppPresenterInterface else {
             return
         }
