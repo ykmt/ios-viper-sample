@@ -1,7 +1,8 @@
 # iOS Viper Sample App
 
-VIPERアーキテクチャのサンプル実相です。
+VIPERアーキテクチャのサンプル実装です。
 
+*  UITableViewDataSource, UITableViewDelegateを追加しました
 
 ## Welcome to GitHub Pages
 
